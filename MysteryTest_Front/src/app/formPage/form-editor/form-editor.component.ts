@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { SalarieService } from '../../Services/salarie.service';
 import { Salarie } from 'src/app/Models/salarie';
 
+
 @Component({
   selector: 'app-form-editor',
   templateUrl: './form-editor.component.html',

@@ -17,7 +17,4 @@
     </mat-form-field>
 </form>
 
-<p>Form Status: {{ salarieForm.status }}</p>
-
-<p>Complete the form to enable button.</p>
-<button (click)="onSubmit()" [disabled]="!salarieForm.valid">Submit</button>
+<button mat-button color="primary" (click)="onSubmit()" [disabled]="!salarieForm.valid">Submit</button>
