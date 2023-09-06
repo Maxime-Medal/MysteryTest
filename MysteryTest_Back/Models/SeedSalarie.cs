@@ -28,8 +28,6 @@ namespace MysteryTest.Models
             }
         }
 
-        // TODO Pour faire un seeding à partir d'une liste en dur
-
         private static List<Salarie> GetSalarie()
         {
 

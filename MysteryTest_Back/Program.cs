@@ -38,7 +38,6 @@ builder.Services.AddScoped<ISalarieService, SalarieService>();
 
 var app = builder.Build();
 
-// TODO pour le seeding
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
