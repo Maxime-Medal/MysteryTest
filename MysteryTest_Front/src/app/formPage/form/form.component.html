@@ -1,7 +1,9 @@
-<app-form-editor></app-form-editor>
-<div>
-    <p>My list</p>
-    <ul *ngFor="let salarie of salaries">
-        <li> {{salarie.prenom}} </li>
-    </ul>
+<div class="container">
+    <app-form-editor></app-form-editor>
+    <div class="list">
+        <p>My list</p>
+        <ul *ngFor="let salarie of salaries">
+            <li> {{salarie.prenom}} </li>
+        </ul>
+    </div>
 </div>
