@@ -1,0 +1,12 @@
+<app-input [item]="curentItem"></app-input>
+
+<app-output (newItemEvent)="addItem($event)"></app-output>
+
+<ul>
+    <li *ngFor="let item of items">{{item}}</li>
+</ul>
+
+<h2>récupérer une réponse</h2>
+<app-display-question [question]="question" [yesAnswer]="yesAnswer" [noAnswer]="noAnswer"
+    (handleVote)="$event"></app-display-question>
+<div> {{childAnswer}} </div>

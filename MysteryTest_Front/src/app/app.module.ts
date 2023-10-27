@@ -15,6 +15,10 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { ParentComponent } from './training/parent/parent.component';
+import { InputComponent } from './training/input/input.component';
+import { OutputComponent } from './training/output/output.component';
+import { DisplayQuestionComponent } from './training/display-question/display-question.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +26,11 @@ import { MatButtonModule } from '@angular/material/button';
     WrongPageComponent,
     NavigationBarComponent,
     FormComponent,
-    FormEditorComponent
+    FormEditorComponent,
+    ParentComponent,
+    OutputComponent,
+    InputComponent,
+    DisplayQuestionComponent,
   ],
   imports: [
     BrowserModule,
