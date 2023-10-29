@@ -8,5 +8,8 @@
 
 <h2>récupérer une réponse</h2>
 <app-display-question [question]="question" [yesAnswer]="yesAnswer" [noAnswer]="noAnswer"
-    (handleVote)="$event"></app-display-question>
-<div> {{childAnswer}} </div>
+    (output)="handleVote($event)"></app-display-question>
+<!-- <div>{{childAnswer}}</div> -->
+<div *ngIf="childAnswer">-- {{yesAnswer}}</div>
+<!-- <div *ngIf="childAnswer; else wrong">-- {{yesAnswer}}</div>
+<ng-template #wrong>oups</ng-template> -->
