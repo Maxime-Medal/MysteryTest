@@ -15,10 +15,12 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { ParentComponent } from './training/parent/parent.component';
-import { InputComponent } from './training/input/input.component';
-import { OutputComponent } from './training/output/output.component';
-import { DisplayQuestionComponent } from './training/display-question/display-question.component';
+import { ParentComponent } from './input-output/parent/parent.component';
+import { InputComponent } from './input-output/input/input.component';
+import { OutputComponent } from './input-output/output/output.component';
+import { DisplayQuestionComponent } from './input-output/display-question/display-question.component';
+import { ModalPageComponent } from './Modal-html/modal-page/modal-page.component';
+import { ModalComponent } from './Modal-html/modal/modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,8 @@ import { DisplayQuestionComponent } from './training/display-question/display-qu
     OutputComponent,
     InputComponent,
     DisplayQuestionComponent,
+    ModalPageComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
