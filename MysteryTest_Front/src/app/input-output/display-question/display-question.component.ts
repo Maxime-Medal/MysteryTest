@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-display-question',
-  templateUrl: './display-question.component.html',
-  styleUrls: ['./display-question.component.css']
+    selector: 'app-display-question',
+    templateUrl: './display-question.component.html',
+    styleUrls: ['./display-question.component.css'],
+    standalone: true
 })
 export class DisplayQuestionComponent {
   @Input()

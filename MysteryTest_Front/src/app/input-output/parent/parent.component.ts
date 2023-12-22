@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import { NgIf } from '@angular/common';
+import { DisplayQuestionComponent } from '../display-question/display-question.component';
+import { InputComponent } from '../input/input.component';
 
 @Component({
-  selector: 'app-parent',
-  templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css']
+    selector: 'app-parent',
+    templateUrl: './parent.component.html',
+    styleUrls: ['./parent.component.css'],
+    standalone: true,
+    imports: [InputComponent, DisplayQuestionComponent, NgIf]
 })
 export class ParentComponent {
   public curentItem: string = "Brancher l'écran" // not for codinGame

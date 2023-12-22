@@ -23,33 +23,31 @@ import { ModalComponent } from './Modal-html/modal/modal.component';
 import { OutputParentComponent } from './output/output-parent/output-parent.component';
 import { OutputComponent } from './output/output/output.component';
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    WrongPageComponent,
-    NavigationBarComponent,
-    FormComponent,
-    FormEditorComponent,
-    ParentComponent,
-    OutputComponent,
-    InputComponent,
-    DisplayQuestionComponent,
-    ModalPageComponent,
-    ModalComponent,
-    OutputParentComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-    MatSlideToggleModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatSlideToggleModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        HomeComponent,
+        WrongPageComponent,
+        NavigationBarComponent,
+        FormComponent,
+        FormEditorComponent,
+        ParentComponent,
+        OutputComponent,
+        InputComponent,
+        DisplayQuestionComponent,
+        ModalPageComponent,
+        ModalComponent,
+        OutputParentComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

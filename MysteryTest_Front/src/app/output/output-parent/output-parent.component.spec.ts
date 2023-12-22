@@ -8,8 +8,8 @@ describe('OutputParentComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [OutputParentComponent]
-    });
+    imports: [OutputParentComponent]
+});
     fixture = TestBed.createComponent(OutputParentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

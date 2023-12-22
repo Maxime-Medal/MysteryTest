@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { SalarieService } from '../../Services/salarie.service';
 import { Salarie } from 'src/app/Models/salarie';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @Component({
-  selector: 'app-form-editor',
-  templateUrl: './form-editor.component.html',
-  styleUrls: ['./form-editor.component.css']
+    selector: 'app-form-editor',
+    templateUrl: './form-editor.component.html',
+    styleUrls: ['./form-editor.component.css'],
+    standalone: true,
+    imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule]
 })
 export class FormEditorComponent {
   get firstName() { return this.salarieForm.get('firstName'); }

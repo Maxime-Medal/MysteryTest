@@ -8,8 +8,8 @@ describe('ModalPageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ModalPageComponent]
-    });
+    imports: [ModalPageComponent]
+});
     fixture = TestBed.createComponent(ModalPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
