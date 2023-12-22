@@ -1,15 +1,11 @@
 <app-input [item]="curentItem"></app-input>
 
-<app-output (newItemEvent)="addItem($event)"></app-output>
 
-<ul>
-    <li *ngFor="let item of items">{{item}}</li>
-</ul>
 
 <h2>récupérer une réponse</h2>
 <app-display-question [question]="question" [yesAnswer]="yesAnswer" [noAnswer]="noAnswer"
     (output)="handleVote($event)"></app-display-question>
 <!-- <div>{{childAnswer}}</div> -->
-<div *ngIf="childAnswer">-- {{yesAnswer}}</div>
+<div *ngIf="childAnswer"> {{yesAnswer}}</div>
 <!-- <div *ngIf="childAnswer; else wrong">-- {{yesAnswer}}</div>
 <ng-template #wrong>oups</ng-template> -->

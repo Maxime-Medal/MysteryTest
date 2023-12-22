@@ -17,10 +17,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ParentComponent } from './input-output/parent/parent.component';
 import { InputComponent } from './input-output/input/input.component';
-import { OutputComponent } from './input-output/output/output.component';
 import { DisplayQuestionComponent } from './input-output/display-question/display-question.component';
 import { ModalPageComponent } from './Modal-html/modal-page/modal-page.component';
 import { ModalComponent } from './Modal-html/modal/modal.component';
+import { OutputParentComponent } from './output/output-parent/output-parent.component';
+import { OutputComponent } from './output/output/output.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { ModalComponent } from './Modal-html/modal/modal.component';
     DisplayQuestionComponent,
     ModalPageComponent,
     ModalComponent,
+    OutputParentComponent,
   ],
   imports: [
     BrowserModule,
