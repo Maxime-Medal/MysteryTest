@@ -39,6 +39,20 @@ namespace MysteryTest.Models
                     Prenom = "Mailly",
                     DateDeNaissance = new DateTime(1967, 11, 22),
                     Email = "LaurenceMailly@rhyta.com"
+                },
+                new Salarie
+                {
+                    Nom = "Doe",
+                    Prenom = "John",
+                    DateDeNaissance = new DateTime(1982, 12, 02),
+                    Email = "john.doe@rhyta.com"
+                },
+                new Salarie
+                {
+                    Nom = "Eau",
+                    Prenom = "Paul",
+                    DateDeNaissance = new DateTime(1987, 07, 22),
+                    Email = "paul.eau@rhyta.com"
                 }
             };
             return salarieist;

@@ -9,8 +9,16 @@ using MysteryTest_Back.Services;
 var allowSpecificOrigins = "allowSpecificOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<MysteryTestContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("MysteryTestContext") ?? throw new InvalidOperationException("Connection string 'MysteryTestContext' not found.")));
+
+var connectionString = builder.Configuration.GetConnectionString("MysteryTestContext");
+var serverVersion = ServerVersion.AutoDetect(connectionString);
+
+builder.Services.AddDbContext<MysteryTestContext>(
+    options => options.
+    UseMySql(connectionString, serverVersion)
+    .LogTo(Console.WriteLine, LogLevel.Information)
+    .EnableSensitiveDataLogging()
+    .EnableDetailedErrors());
 
 //Ajout des services de base
 builder.Services.AddCors(options =>
