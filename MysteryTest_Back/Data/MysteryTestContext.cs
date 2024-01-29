@@ -9,13 +9,12 @@ namespace MysteryTest_Back.Data
 {
     public class MysteryTestContext : DbContext
     {
-        public MysteryTestContext (DbContextOptions<MysteryTestContext> options)
-            : base(options)
+        public MysteryTestContext (DbContextOptions<MysteryTestContext> options) : base(options)
         {
         }
 
-        public DbSet<MysteryTest.Models.Client> Client { get; set; } = default!;
+        public DbSet<Client> Client { get; set; }
 
-        public DbSet<MysteryTest.Models.Salarie> Salarie { get; set; } = default!;
+        public DbSet<Salarie> Salarie { get; set; }
     }
 }

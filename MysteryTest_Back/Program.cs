@@ -15,10 +15,7 @@ var serverVersion = ServerVersion.AutoDetect(connectionString);
 
 builder.Services.AddDbContext<MysteryTestContext>(
     options => options.
-    UseMySql(connectionString, serverVersion)
-    .LogTo(Console.WriteLine, LogLevel.Information)
-    .EnableSensitiveDataLogging()
-    .EnableDetailedErrors());
+    UseMySql(connectionString, serverVersion: ServerVersion.AutoDetect(connectionString)));
 
 //Ajout des services de base
 builder.Services.AddCors(options =>
