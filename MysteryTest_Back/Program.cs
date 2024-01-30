@@ -35,8 +35,6 @@ builder.Services.AddCors(options =>
 // Add services to the container.
 
 builder.Services.AddControllers();
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ISalarieService, SalarieService>(); // TODO Ajout du service!
@@ -46,6 +44,8 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<MysteryTestContext>();
+    context.Database.Migrate();
 
     SeedSalarie.Initialize(services);
 }

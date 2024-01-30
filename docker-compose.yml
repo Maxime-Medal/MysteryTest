@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+    mystery_test:
+        container_name: mystery_test
+        build:
+            context: .
+            dockerfile: MysteryTest_Back/Dockerfile
+        ports:
+            - "5189:80"
+            - "7075:443"
+        depends_on:
+            - mariadb
+        networks:
+            - app-network
+
+    mariadb:
+        image: mariadb:latest
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: MysteryTest
+            MYSQL_USER: maxou
+            MYSQL_PASSWORD: claixime
+        volumes:
+            - /home/maxou/data/mysql:/var/lib/mysql
+        ports:
+            - "3306:3306"
+        networks:
+            - app-network
+
+networks:
+    app-network:
+        driver: bridge
