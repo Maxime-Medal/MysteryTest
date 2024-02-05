@@ -21,3 +21,4 @@ L'appli fonctionne mais il manque des éléments comme cela est détaillé en su
 -   le formulaire pour ajouter une société, seul un salarié peut être enregistré à la fois
 -   le nom des composants n'est pas forcément intuitif
 -   réinitialiser le formulaire quand l'envoi est réussi
+ ajout pour commit
