@@ -3,6 +3,7 @@ version: '3.8'
 services:
     mystery_test:
         container_name: mystery_test
+        #restart: always
         build:
             context: .
             dockerfile: MysteryTest_Back/Dockerfile
@@ -16,14 +17,14 @@ services:
 
     mariadb:
         image: mariadb:latest
-        restart: always
+        #restart: always
         environment:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: MysteryTest
             MYSQL_USER: maxou
             MYSQL_PASSWORD: claixime
         volumes:
-            - /home/maxou/data/mysql:/var/lib/mysql
+            - /home/$USER/data/mysql:/var/lib/mysql
         ports:
             - "3306:3306"
         networks:
