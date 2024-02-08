@@ -1,11 +1,10 @@
+<!--  binding @input with app-input -->
 <app-input [item]="curentItem"></app-input>
 
 
-
+<!-- Binding @output with displayQuestion -->
 <h2>récupérer une réponse</h2>
 <app-display-question [question]="question" [yesAnswer]="yesAnswer" [noAnswer]="noAnswer"
     (output)="handleVote($event)"></app-display-question>
-<!-- <div>{{childAnswer}}</div> -->
-<div *ngIf="childAnswer"> {{yesAnswer}}</div>
-<!-- <div *ngIf="childAnswer; else wrong">-- {{yesAnswer}}</div>
-<ng-template #wrong>oups</ng-template> -->
+
+<div id="lastVote">{{answer}}</div>

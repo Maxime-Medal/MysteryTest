@@ -4,11 +4,11 @@ import { DisplayQuestionComponent } from '../display-question/display-question.c
 import { InputComponent } from '../input/input.component';
 
 @Component({
-    selector: 'app-parent',
-    templateUrl: './parent.component.html',
-    styleUrls: ['./parent.component.css'],
-    standalone: true,
-    imports: [InputComponent, DisplayQuestionComponent, NgIf]
+  selector: 'app-parent',
+  templateUrl: './parent.component.html',
+  styleUrls: ['./parent.component.css'],
+  standalone: true,
+  imports: [InputComponent, DisplayQuestionComponent, NgIf]
 })
 export class ParentComponent {
   public curentItem: string = "Brancher l'écran" // not for codinGame
@@ -17,9 +17,10 @@ export class ParentComponent {
   public yesAnswer: string = "Yes";
   public noAnswer: string = "No";
   public childAnswer: boolean;
+  public answer = "";
 
 
-  handleVote(event: any): void {
-    this.childAnswer = event;
+  handleVote(event: boolean): void {
+    this.answer = event ? this.yesAnswer : this.noAnswer;
   }
 }
