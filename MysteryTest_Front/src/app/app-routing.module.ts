@@ -7,6 +7,7 @@ import { ParentComponent } from './input-output/parent/parent.component';
 import { ModalPageComponent } from './Modal-html/modal-page/modal-page.component';
 import { OutputParentComponent } from './output/output-parent/output-parent.component';
 import { DisplayCounterComponent } from './counter-component/display-counter/display-counter.component';
+import { DisplayAccountComponent } from './account-topUp/display-account/display-account.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'Output', component: OutputParentComponent, pathMatch: 'full' },
   { path: 'Modal', component: ModalPageComponent, pathMatch: 'full' },
   { path: 'Counter', component: DisplayCounterComponent, pathMatch: 'full' },
+  { path: 'TopUp-Account', component: DisplayAccountComponent, pathMatch: 'full' },
   { path: '**', component: WrongPageComponent },
 
 
