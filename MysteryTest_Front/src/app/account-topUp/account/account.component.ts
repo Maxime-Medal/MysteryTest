@@ -40,7 +40,7 @@ export class AccountComponent {
     this.accountName = (document.getElementById('topupAccountInput') as HTMLInputElement).value;
     const amount = (document.getElementById('topupAmountInput') as HTMLInputElement).value;
 
-    if (this.topUpAmount <= 0) {
+    if (parseInt(amount) <= 0) {
       console.log('error');
       this.message = 'INVALID INPUT';
 

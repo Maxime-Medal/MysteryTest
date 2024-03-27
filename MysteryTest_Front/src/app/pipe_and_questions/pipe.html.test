@@ -1,0 +1,42 @@
+// pipe
+<div id="fee">{{fee | percent: '2.2-3' }}</div>
+<div id="amount">{{amount | currency: currency : 'symbol': '9.2-2' }}</div>
+<div id="time">{{timeOfTransaction | date : 'ww: yyyy MMMMM dd hh-mm-ss'}}</div>
+
+- Quel service peut-on utiliser pour récupérer les paramètres de route depuis un composant ?
+=> activatedRoute
+
+- Quelle est la stratégie de détection de modifications par défaut pour un composant ?
+=> Default
+
+- Quelle directive built-in Angular peut-on utiliser pour remplacer ???? à la ligne 6 pour d'appliquer la
+classe blue de manière conditionnelle ?
+=> [ngClass]
+
+- Au sein de l'objet de type Routes , quelle propriété permet de définir des routes filles ?
+=> children
+
+
+Dom-Color
+@Component({
+  selector:'label-component',
+  template: `
+    <div class="label" [style.color]='color'>{{label}}</div>
+    <div class="label" id="label">{{label}}</div>
+  `
+})
+export class LabelComponent implements OnInit {
+  @Input()
+  label: string;
+
+  @Input()
+  color: string;
+  
+  labelDiv;
+  
+  ngOnInit(): void {
+    this. labelDiv = document.getElementById("label");
+    this.labelDiv.style.color = this.color;
+
+  }
+}
