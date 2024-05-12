@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 
 @Component({
@@ -7,7 +7,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     standalone: true,
-    imports: [NavigationBarComponent, RouterOutlet]
+    imports: [NavigationBarComponent, RouterOutlet, RouterLink, RouterLinkActive]
 })
 export class AppComponent {
 }
